@@ -5,6 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZILLA Tokenomics</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    table {
+      margin: 30px auto;
+      border-collapse: collapse;
+      width: 80%;
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0,255,255,0.2);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 15px 20px;
+      text-align: left;
+    }
+
+    th {
+      background: rgba(0,255,255,0.2);
+      color: #00ffff;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    tr:nth-child(even) {
+      background: rgba(255,255,255,0.05);
+    }
+
+    td {
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .more-info {
+      width: 80%;
+      margin: 30px auto;
+      text-align: left;
+      line-height: 1.8em;
+      color: #ccc;
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,255,255,0.1);
+    }
+
+    .more-info h2 {
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar">
@@ -19,16 +70,48 @@
   <section class="hero">
     <div class="bg"></div>
     <div class="rotating-orb"></div>
-    <h2 class="title">📊 Tokenomics</h2>
-    <p class="desc">
-      Total Supply: <b>1,000,000,000 $ZILA</b><br><br>
-      🌀 Distribution:<br>
-      🔹 Community Airdrop — 40%<br>
-      🔹 Liquidity Pool — 30%<br>
-      🔹 Marketing & Ecosystem — 20%<br>
-      🔹 Team & Development — 10%<br><br>
-      ZILLA ensures fairness, transparency, and meme-powered sustainability.
-    </p>
+
+    <h2 class="title">💎 Tokenomics</h2>
+    <p class="desc">Total Supply: <b>1,000,000,000 $ZILA</b></p>
+
+    <table>
+      <tr>
+        <th>Category</th>
+        <th>Allocation</th>
+      </tr>
+      <tr>
+        <td>Liquidity</td>
+        <td>10%</td>
+      </tr>
+      <tr>
+        <td>Airdrop</td>
+        <td>2%</td>
+      </tr>
+      <tr>
+        <td>Ecosystem</td>
+        <td>10%</td>
+      </tr>
+      <tr>
+        <td>Team</td>
+        <td>10%</td>
+      </tr>
+      <tr>
+        <td>Staking</td>
+        <td>42%</td>
+      </tr>
+      <tr>
+        <td>Private Round</td>
+        <td>5%</td>
+      </tr>
+    </table>
+
+    <div class="more-info">
+      <h2>More Info</h2>
+      <p><b>Initial Liquidity:</b> 10% of total supply</p>
+      <p><b>Team:</b> 0% TGE, 15 months linear vesting</p>
+      <p><b>Marketing:</b> 10% TGE, 8 months linear vesting</p>
+      <p><b>Private Round:</b> 10% TGE, 8 months linear vesting</p>
+    </div>
   </section>
 
   <footer>

@@ -5,166 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZILLA Dashboard</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: radial-gradient(circle at center, #08001f, #000);
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 15px 25px;
-      box-shadow: 0 0 15px rgba(0,255,255,0.2);
-    }
-
-    .navbar h1 {
-      color: #00ffff;
-      font-size: 20px;
-      letter-spacing: 2px;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 15px;
-      padding: 0;
-      margin: 0;
-    }
-
-    .nav-links a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #00ffff;
-      text-shadow: 0 0 10px #00ffff;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 80px 15px 40px;
-      position: relative;
-      min-height: 90vh;
-    }
-
-    .bg {
-      position: absolute;
-      width: 200%;
-      height: 200%;
-      background: repeating-linear-gradient(
-        45deg,
-        rgba(138, 43, 226, 0.05),
-        rgba(75, 0, 130, 0.05) 10px,
-        transparent 10px,
-        transparent 20px
-      );
-      animation: move-bg 20s linear infinite;
-      z-index: -2;
-    }
-
-    @keyframes move-bg {
-      0% { transform: rotate(0deg) translate(0, 0); }
-      100% { transform: rotate(360deg) translate(10px, 10px); }
-    }
-
-    .rotating-orb {
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      top: 10%;
-      right: 10%;
-      background: radial-gradient(circle, #00ffff, transparent);
-      box-shadow: 0 0 80px 20px #00ffff;
-      animation: spin 12s linear infinite;
-      z-index: -1;
-      opacity: 0.6;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    .title {
-      font-size: 30px;
-      color: #00ffff;
-      text-shadow: 0 0 15px #00ffff;
-      margin-bottom: 15px;
-    }
-
-    .subtitle {
-      font-size: 18px;
-      color: #9b6bff;
-      text-shadow: 0 0 10px #7b3fff;
-      margin-bottom: 15px;
-    }
-
-    .desc {
-      font-size: 16px;
-      color: #ccc;
-      line-height: 1.6em;
-      width: 90%;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .socials {
-      margin-top: 40px;
-      text-align: center;
-    }
-
-    .socials h3 {
-      color: #00ffff;
-      font-size: 18px;
-      text-shadow: 0 0 10px #00ffff;
-      margin-bottom: 10px;
-    }
-
-    .socials a {
-      color: #00ffff;
-      font-weight: 600;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .socials a:hover {
-      color: #fff;
-      text-shadow: 0 0 12px #00ffff;
-    }
-
-    footer {
-      text-align: center;
-      color: #888;
-      font-size: 13px;
-      padding: 20px 0;
-      background: rgba(0,0,0,0.7);
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
 </head>
-
 <body>
   <nav class="navbar">
     <h1>ZILLA</h1>
     <ul class="nav-links">
-      <li><a href="index.html" target="_blank">Dashboard</a></li>
-      <li><a href="tokenomics.html" target="_blank">Tokenomics</a></li>
-      <li><a href="whitepaper.html" target="_blank">Whitepaper</a></li>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="tokenomics.html">Tokenomics</a></li>
+      <li><a href="whitepaper.html">Whitepaper</a></li>
     </ul>
   </nav>
 
@@ -172,19 +20,18 @@
     <div class="bg"></div>
     <div class="rotating-orb"></div>
 
-    <h2 class="title">Welcome to ZILLA Foundation</h2>
-    <p class="subtitle">💎 The Multichain Memecoin Revolution 🐉</p>
-
+    <h2 class="title">🚀 Welcome to ZILLA Foundation</h2>
     <p class="desc">
-      ZILLA ($ZILA) is a next-generation multichain memecoin powered by Polygon, BNB, and Solana.
-      It’s more than just a token — it’s a movement built on community, innovation, and creativity.
-      Fast, fun, and fearless — ZILLA connects the world of memes with blockchain evolution.
+      ZILLA ($ZILA) is a multichain memecoin powered by innovation, community, and speed.  
+      Built on <b>Polygon, Solana, and BNB Chain</b> — ZILLA unites meme culture with advanced technology.  
+      <br><br>
+      Join us in building the future of decentralized fun!
     </p>
 
-    <div class="socials">
-      <h3>Follow Our Official Channels</h3>
-      <p>🐦 X (Twitter): <a href="https://x.com/zilliqiacom" target="_blank">@zilliqiacom</a></p>
-      <p>📢 Telegram Channel: <a href="https://t.me/zilacoin" target="_blank">ZillaCoin</a></p>
+    <div class="social-links">
+      <p>Connect with us:</p>
+      <a href="https://x.com/zilliqiacom" target="_blank">Twitter (X)</a> |
+      <a href="https://t.me/zilacoin" target="_blank">Telegram</a>
     </div>
   </section>
 

@@ -1,121 +1,31 @@
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  color: white;
-  overflow-x: hidden;
-}
-
-/* Hero backgrounds */
-.hero {
+/* Hero background with moon effect */
+.hero.moon-bg {
+  position: relative;
   height: 100vh;
   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  background-image: url('https://i.ibb.co/mHJn9kh/futuristic-bg.jpg');
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.tokenomics-bg {
-  background-image: url('https://i.ibb.co/Z6c9yTZ/tokenomics-bg.jpg');
+/* Floating moon image */
+.moon {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  width: 250px;
+  height: 250px;
+  background-image: url('https://i.ibb.co/VQ8C2vP/moon-ai.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+  box-shadow: 0 0 60px rgba(0,255,255,0.3);
 }
 
-.whitepaper-bg {
-  background-image: url('https://i.ibb.co/Rp9s5jP/whitepaper-bg.jpg');
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-  background: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-}
-
-.navbar h1 {
-  font-size: 26px;
-  color: #00ffff;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
-}
-
-/* Content */
-.content {
-  max-width: 800px;
-  margin: 120px auto 0 auto;
-  padding: 40px;
-  background: rgba(0,0,0,0.5);
-  border-radius: 20px;
-  box-shadow: 0 0 30px rgba(0,255,255,0.2);
-  animation: fadeIn 2s ease-in-out;
-}
-
-.content h2 {
-  font-size: 36px;
-  color: #00ffff;
-}
-
-.content p, .token-list li {
-  font-size: 18px;
-  line-height: 1.8;
-}
-
-.token-list {
-  list-style: none;
-  padding: 0;
-}
-
-.explore-btn {
-  background: #00ffff;
-  color: #000;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.explore-btn:hover {
-  background: white;
-  color: #000;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: rgba(0,0,0,0.6);
-  font-size: 14px;
-  color: #aaa;
-}
-
-/* Animation */
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
 }

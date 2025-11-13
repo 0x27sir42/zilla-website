@@ -1,144 +1,159 @@
-/* ===== FONT & GLOBAL STYLING ===== */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Orbitron', sans-serif;
-  background: radial-gradient(circle at center, #07001f, #000);
+  background: radial-gradient(circle at center, #08001f, #000);
   color: #fff;
-  overflow: hidden;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
-/* ===== HERO SECTION ===== */
-.hero {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-/* Animated futuristic grid background */
+/* 🔹 Background animation universal */
 .bg {
-  position: absolute;
-  width: 300%;
-  height: 300%;
+  position: fixed;
+  width: 200%;
+  height: 200%;
   background: repeating-linear-gradient(
     45deg,
-    rgba(138, 43, 226, 0.06),
-    rgba(75, 0, 130, 0.06) 10px,
+    rgba(138, 43, 226, 0.05),
+    rgba(75, 0, 130, 0.05) 10px,
     transparent 10px,
     transparent 20px
   );
   animation: move-bg 25s linear infinite;
   z-index: -2;
-  filter: blur(1px);
 }
 
 @keyframes move-bg {
-  0% { transform: rotate(0deg) scale(1); }
-  100% { transform: rotate(360deg) scale(1); }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-/* ===== TITLES & TEXT ===== */
-.title {
-  font-size: 3.2em;
-  color: #b18bff;
-  text-shadow: 0 0 30px #7b3fff, 0 0 10px #00ffff;
+/* 🔹 Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+  padding: 20px 50px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar h1 {
+  font-size: 22px;
+  color: #00ffff;
   letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+/* 🔹 Hero section (Index Dashboard) */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 100px 20px;
   animation: fadeIn 2s ease-in;
+}
+
+.title {
+  font-size: 3em;
+  color: #9b6bff;
+  text-shadow: 0 0 20px #7b3fff;
 }
 
 .subtitle {
   font-size: 1.5em;
   color: #00ffff;
-  text-shadow: 0 0 20px #00eaff;
-  margin-top: 0.3em;
+  text-shadow: 0 0 10px #00eaff;
 }
 
 .desc {
-  margin-top: 1.5em;
+  margin-top: 1em;
   font-size: 1.1em;
   color: #ccc;
-  line-height: 1.7em;
-  max-width: 800px;
+  line-height: 1.6em;
+}
+
+/* 🔹 Universal section style (for tokenomics & whitepaper) */
+.section {
+  padding: 100px 20px;
   text-align: center;
-  animation: fadeInUp 2s ease-in;
+  position: relative;
+  z-index: 1;
 }
 
-/* ===== BUTTON LINKS ===== */
-.links {
-  margin-top: 2em;
+.section h2 {
+  font-size: 2.5em;
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff;
+  margin-bottom: 20px;
 }
 
-.links a {
-  text-decoration: none;
-  color: white;
-  background: linear-gradient(90deg, #7b3fff, #00ffff);
-  padding: 12px 25px;
-  margin: 8px;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(0,255,255,0.3);
-}
-
-.links a:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 30px #00ffff;
-}
-
-/* ===== TOKEN INFO BOX ===== */
-.token-info {
-  margin-top: 2em;
-  background: rgba(255, 255, 255, 0.08);
-  padding: 20px 40px;
+.section p {
+  color: #ccc;
+  font-size: 1.1em;
+  line-height: 1.6em;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
   border-radius: 15px;
-  display: inline-block;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
-  animation: fadeInUp 2.5s ease-in;
+  box-shadow: 0 0 30px rgba(0,255,255,0.1);
 }
 
-/* ===== ORB (MOON / ENERGY EFFECT) ===== */
+/* 🔹 Floating Orb (3D light) */
 .rotating-orb {
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  top: 15%;
-  right: 10%;
+  position: fixed;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  background: radial-gradient(circle, #00ffff, rgba(0,255,255,0.1), transparent);
-  box-shadow: 0 0 100px 20px rgba(0,255,255,0.3);
-  animation: spin 14s linear infinite;
-  opacity: 0.8;
+  top: 10%;
+  right: 10%;
+  background: radial-gradient(circle, #00ffff, transparent);
+  box-shadow: 0 0 100px 20px #00ffff;
+  animation: spin 12s linear infinite;
   z-index: -1;
+  opacity: 0.6;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg) scale(1); }
-  100% { transform: rotate(360deg) scale(1); }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-/* ===== FOOTER ===== */
+/* 🔹 Footer */
 footer {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
   text-align: center;
-  color: #888;
-  font-size: 0.85em;
-  letter-spacing: 1px;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  color: #aaa;
+  font-size: 14px;
+  position: relative;
 }
 
-/* ===== ANIMATIONS ===== */
+/* 🔹 Fade in animation */
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(-10px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
 }

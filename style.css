@@ -2,15 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Orbitron', sans-serif;
-  background: radial-gradient(circle at center, #08001f, #000);
-  color: #fff;
-  overflow-x: hidden;
+margin: 0;
+padding: 0;
+font-family: 'Orbitron', sans-serif;
+background: radial-gradient(circle at center, #08001f, #000);
+color: #fff;
+overflow-x: hidden;
 }
 
-.zila-img {
+a-img {
   width: 260px;
   margin-top: 20px;
   border-radius: 20px;

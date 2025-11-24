@@ -1,53 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="id">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ZILLA — Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Kepler-452b Background — Coin Demo</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="page-dashboard">
+<body>
+  <div class="bg-layer"></div>
 
-  <nav class="navbar">
-    <h1 class="brand">ZILLA</h1>
-    <ul class="nav-links">
-      <li><a href="index.html">Dashboard</a></li>
-      <li><a href="tokenomics.html">Tokenomics</a></li>
-      <li><a href="whitepaper.html">Whitepaper</a></li>
-    </ul>
-  </nav>
+  <main class="container">
+    <header class="topbar">
+      <h1>STUDIHARDWARE / Kepler View</h1>
+    </header>
 
-  <main class="hero">
-    <div class="bg"></div>
-    <div class="rotating-orb" aria-hidden="true"></div>
+    <section class="dashboard">
+      <div class="coin-circle">
+        <!-- ganti zilla-coin.png dengan file coin Anda -->
+        <img src="zilla-coin.png" alt="Coin" class="coin" />
+      </div>
 
-    <!-- Prefered: place your coin image at img/zila.png -->
-    <!-- If img/zila.png not present, CSS fallback SVG will show -->
-    <img src="img/zila.png" class="zila-img" alt="ZILLA Logo (coin)">
+      <div class="info-card">
+        <h2>Token: $SH</h2>
+        <p>Airdrop &amp; Dashboard view with Kepler-452b background.</p>
+        <button class="btn">Join Airdrop</button>
+      </div>
+    </section>
 
-    <h2 class="title">🚀 Welcome to ZILLA Foundation</h2>
-    <p class="lead">
-      ZILLA ($ZILA) — a multichain memecoin bridging Polygon, Solana, and BNB Chain.
-      Community-powered, fast, and fun.
-    </p>
-
-    <div class="cta">
-      <a href="tokenomics.html" class="btn">View Tokenomics</a>
-      <a href="whitepaper.html" class="btn alt">Read Whitepaper</a>
-    </div>
+    <footer class="footer">
+      <small>Background image (artist impression) — Kepler-452b. Source: NASA.</small>
+    </footer>
   </main>
-
-  <section class="section-box about">
-    <h3>About</h3>
-    <p>
-      ZILLA blends meme culture with robust tokenomics and on-chain utility.
-      Join the community to earn rewards, participate in governance, and enjoy memecoin culture.
-    </p>
-  </section>
-
-  <footer class="site-footer">
-    © 2025 Zilla Foundation — All Rights Reserved
-  </footer>
-
 </body>
 </html>

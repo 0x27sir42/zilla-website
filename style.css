@@ -8,6 +8,7 @@ body {
   background: radial-gradient(circle at center, #08001f, #000);
   color: #fff;
   overflow-x: hidden;
+}
 
 a-img {
   width: 260px;

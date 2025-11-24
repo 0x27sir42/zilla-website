@@ -1,3 +1,4 @@
+<!-- STYLE.CSS -->
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
 
 body {
@@ -9,12 +10,13 @@ body {
   overflow-x: hidden;
 }
 
-.zila img {
-      width: 250px;
-      border-radius: 50%;
-      box-shadow: 0 0 25px rgba(139, 92, 246, 0.4);
+.zila-img {
+  width: 260px;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.35);
+}
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -48,7 +50,6 @@ body {
   color: #00ffff;
 }
 
-/* Hero Section */
 .hero {
   text-align: center;
   padding: 60px 20px;
@@ -96,39 +97,4 @@ body {
 }
 
 .title {
-  font-size: 1.8em;
-  color: #9b6bff;
-  text-shadow: 0 0 15px #7b3fff;
-}
-
-.desc {
-  font-size: 1em;
-  color: #ccc;
-  margin-top: 15px;
-  line-height: 1.6;
-}
-
-/* Social links */
-.social-links {
-  margin-top: 25px;
-  font-size: 0.9em;
-}
-
-.social-links a {
-  color: #00ffff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.social-links a:hover {
-  text-shadow: 0 0 10px #00ffff;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px 0;
-  color: #666;
-  font-size: 0.8em;
-}
+  font-size

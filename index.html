@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZILLA Foundation</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ZILLA — Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+<body class="page-dashboard">
 
-<body class="dashboard-page">
+  <nav class="navbar">
+    <h1 class="brand">ZILLA</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="tokenomics.html">Tokenomics</a></li>
+      <li><a href="whitepaper.html">Whitepaper</a></li>
+    </ul>
+  </nav>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <h1>ZILLA</h1>
-        <ul class="nav-links">
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a href="tokenomics.html">Tokenomics</a></li>
-            <li><a href="whitepaper.html">Whitepaper</a></li>
-        </ul>
-    </nav>
+  <main class="hero">
+    <div class="bg"></div>
+    <div class="rotating-orb" aria-hidden="true"></div>
 
-    <!-- HERO SECTION -->
-    <div class="hero">
+    <!-- Prefered: place your coin image at img/zila.png -->
+    <!-- If img/zila.png not present, CSS fallback SVG will show -->
+    <img src="img/zila.png" class="zila-img" alt="ZILLA Logo (coin)">
 
-        <!-- GALAXY BACKGROUND -->
-        <div class="bg"></div>
+    <h2 class="title">🚀 Welcome to ZILLA Foundation</h2>
+    <p class="lead">
+      ZILLA ($ZILA) — a multichain memecoin bridging Polygon, Solana, and BNB Chain.
+      Community-powered, fast, and fun.
+    </p>
 
-        <!-- ORB ANIMATION -->
-        <div class="rotating-orb"></div>
-
-        <!-- MAIN IMAGE -->
-        <img src="img/YOUR_IMAGE.png" class="zila-img" alt="Zilla Mascot">
-
-        <h2 class="title">Welcome to ZILLA Foundation</h2>
-
-        <p class="hero-text">
-            ZILLA ($ZILA) is a multichain memecoin powered by innovation, community, and speed.
-            Built on Polygon, Solana, and BNB Chain.
-        </p>
-
-        <p class="hero-text">
-            Join us in building the future of decentralized fun!
-        </p>
+    <div class="cta">
+      <a href="tokenomics.html" class="btn">View Tokenomics</a>
+      <a href="whitepaper.html" class="btn alt">Read Whitepaper</a>
     </div>
+  </main>
+
+  <section class="section-box about">
+    <h3>About</h3>
+    <p>
+      ZILLA blends meme culture with robust tokenomics and on-chain utility.
+      Join the community to earn rewards, participate in governance, and enjoy memecoin culture.
+    </p>
+  </section>
+
+  <footer class="site-footer">
+    © 2025 Zilla Foundation — All Rights Reserved
+  </footer>
 
 </body>
 </html>

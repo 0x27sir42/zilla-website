@@ -1,164 +1,130 @@
-/* ============================
-   ZILLA — STYLE.CSS (FINAL)
-   Copy & paste this file as-is
-   ============================ */
+/* Reset ringan */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Inter, system-ui, Arial, sans-serif; }
 
-/* FONT */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
-
-/* ----------------------------
-   GLOBAL / GALAXY BACKGROUND
-   ---------------------------- */
-/* Using Unsplash deep-space image (no humans). Replace with img/galaxy.jpg if you prefer local file. */
-:root{
-  --glass-bg: rgba(0,0,0,0.54);
-  --accent: #00ffff;
-  --muted: #cfd8dc;
-}
-
-*{box-sizing:border-box}
-html,body{height:100%}
+html,body { height: 100%; }
 
 body {
-  margin: 0;
-  font-family: 'Orbitron', sans-serif;
+  min-height: 100%;
+  background: #000; /* fallback */
   color: #fff;
-  background: url('https://images.unsplash.com/photo-1465101162946-4377e57745c3?q=80&w=1600&auto=format&fit=crop') no-repeat center center fixed;
+}
+
+/* layer background gambar Kepler-452b */
+.bg-layer {
+  position: fixed;
+  inset: 0;
+  background-image: url('kepler-452b.jpg'); /* letakkan file kepler-452b.jpg di folder yang sama */
   background-size: cover;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  overflow-x: hidden;
-  line-height:1.45;
+  background-position: center center;
+  filter: brightness(0.45) contrast(1.05) saturate(1.1);
+  z-index: -2;
 }
 
-/* subtle overlay so content is readable */
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.5));
-  z-index:-1;
+/* subtle star grain overlay */
+.bg-layer::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.02) 0.5px, transparent 0.5px);
+  background-size: 60px 60px;
+  mix-blend-mode: overlay;
+  pointer-events: none;
 }
 
-/* NAVBAR */
-.navbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:14px 20px;
-  position:sticky;
-  top:0;
-  z-index:40;
-  background: rgba(0,0,0,0.45);
-  backdrop-filter: blur(6px) saturate(120%);
-  border-bottom: 1px solid rgba(0,255,255,0.06);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+/* main container */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  text-align: center;
+  z-index: 1;
 }
-.brand{font-size:20px;color:var(--accent);margin:0}
-.nav-links{display:flex;gap:12px;list-style:none;margin:0;padding:0}
-.nav-links a{color:#fff;text-decoration:none;font-weight:600;opacity:0.95}
-.nav-links a:hover{color:var(--accent)}
 
-/* HERO / DASHBOARD */
-.hero{
-  text-align:center;
-  padding:72px 20px 40px;
-  position:relative;
+/* topbar */
+.topbar {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  color: #e6e6e6;
 }
-.bg{
-  position:absolute;
-  inset:-25% -25% auto -25%;
-  width:150%;
-  height:150%;
-  z-index:-2;
-  background: repeating-linear-gradient(45deg, rgba(138,43,226,0.03), rgba(75,0,130,0.03) 8px, transparent 8px, transparent 16px);
-  animation: bgRotate 28s linear infinite;
-}
-@keyframes bgRotate{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
 
-.rotating-orb{
-  position:absolute;
-  width:120px;height:120px;border-radius:50%;
-  top:12%; right:12%;
-  background: radial-gradient(circle at 40% 30%, rgba(0,255,255,0.9), rgba(0,255,255,0.05) 35%, transparent 60%);
-  box-shadow: 0 0 60px 18px rgba(0,255,255,0.08);
-  z-index:0; opacity:0.7; transform-origin:center; animation:spin 18s linear infinite;
+/* dashboard area */
+.dashboard {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  backdrop-filter: blur(6px) saturate(1.05);
 }
-@keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
 
-/* ZILA IMAGE: prefer local img/zila.png; fallback: inline SVG silhouette */
-.zila-img{
-  display:inline-block;
-  width:260px;
-  height:260px;
-  object-fit:contain;
-  border-radius:18px;
-  margin-top:8px;
-  box-shadow: 0 0 30px rgba(0,255,255,0.18);
-  background: transparent;
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size:contain;
+/* coin circle */
+.coin-circle {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, rgba(255,255,255,0.035), rgba(0,0,0,0.25));
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6), inset 0 3px 20px rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.04);
+  position: relative;
+  overflow: hidden;
 }
 
-/* fallback: if no image file present the browser still shows a stylized SVG as background */
-.zila-img[src="img/zila.png"]{
-  /* if local file exists this rule does nothing */
-}
-.zila-img:not([src]){
-  /* won't happen in most browsers, but keep fallback safe */
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect width=%22200%22 height=%22200%22 fill=%22%23000914%22/><g transform=%22translate(30,30)%22 fill=%22%2300ffff%22 opacity=%220.85%22><path d=%22M55 20 C45 2, 5 0, 0 40 C-5 80, 35 110, 55 100 C75 90, 95 110, 100 80 C105 50, 95 30, 75 22 C65 18, 60 22, 55 20 Z%22/></g></svg>');
-  background-size:70% 70%;
-}
-
-/* typography */
-.title{font-size:28px;margin:12px 0;color:var(--accent);text-shadow:0 0 14px rgba(0,255,255,0.08)}
-.lead{color: #d0d8da;max-width:880px;margin:0 auto 18px}
-
-/* CTA buttons */
-.btn{
-  display:inline-block;
-  padding:10px 18px;
-  margin:10px 8px;
-  border-radius:10px;
-  background: linear-gradient(90deg, rgba(0,255,255,0.12), rgba(0,255,255,0.06));
-  color:#fff;text-decoration:none;font-weight:700;border:1px solid rgba(0,255,255,0.08);
-  box-shadow: 0 6px 18px rgba(0,255,255,0.06);
-}
-.btn.alt{background:transparent;border:1px solid rgba(255,255,255,0.06)}
-
-/* SECTION BOX (tokenomics / whitepaper) */
-.section-box{
-  max-width:920px;
-  margin:28px auto;
-  padding:22px;
-  background: rgba(0,0,0,0.56);
-  border-radius:14px;
-  border:1px solid rgba(0,255,255,0.06);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
-}
-.section-box h2{color:var(--accent);margin-top:0;text-align:center}
-
-/* tokenomics table */
-.tok-table{width:100%;border-collapse:collapse;margin-top:12px;color:#fff}
-.tok-table th, .tok-table td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.03)}
-.tok-table th{color:var(--accent);text-transform:uppercase;font-size:12px}
-
-/* whitepaper content */
-.whitepaper-content h3{margin-bottom:6px;color:var(--accent)}
-.whitepaper-content p{color:#d6e3e8}
-
-/* small helpers */
-.muted{color:#bfc9cc}
-.site-footer{text-align:center;padding:20px 10px;color:#98a6aa;font-size:13px;margin-top:28px}
-
-/* responsive */
-@media (max-width:720px){
-  .zila-img{width:160px;height:160px}
-  .hero{padding:48px 16px}
-  .rotating-orb{display:none}
+/* if you want the coin image centered */
+.coin {
+  width: 78%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.6));
+  transform: translateY(-4px);
 }
 
-/* ensure imgs have no white bg */
-img{background:transparent!important}
+/* info card */
+.info-card {
+  width: 360px;
+  padding: 18px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(255,255,255,0.02));
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.04);
+  text-align: left;
+}
+
+.info-card h2 { margin-bottom: 8px; font-size: 20px; }
+.info-card p { margin-bottom: 14px; font-size: 14px; color: #dcdcdc; }
+
+.btn {
+  appearance: none;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  font-weight: 600;
+  transition: transform .12s ease, background .12s ease;
+}
+
+.btn:hover { transform: translateY(-3px); background: rgba(255,255,255,0.09); }
+
+/* footer */
+.footer {
+  position: absolute;
+  bottom: 12px;
+  left: 18px;
+  right: 18px;
+  text-align: left;
+  color: #bdbdbd;
+  font-size: 12px;
+}

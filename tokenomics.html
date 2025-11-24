@@ -1,3 +1,4 @@
+<!-- TOKENOMICS.HTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,186 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZILLA Tokenomics</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: radial-gradient(circle at center, #0a001f, #000);
-      color: white;
-      overflow-x: hidden;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 15px 25px;
-      box-shadow: 0 0 15px rgba(0,255,255,0.2);
-    }
-
-    .navbar h1 {
-      font-size: 20px;
-      color: #00ffff;
-      letter-spacing: 2px;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 15px;
-      padding: 0;
-      margin: 0;
-    }
-
-    .nav-links a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #00ffff;
-      text-shadow: 0 0 10px #00ffff;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 60px 15px;
-      position: relative;
-      min-height: 100vh;
-      box-sizing: border-box;
-    }
-
-    .bg {
-      position: absolute;
-      width: 200%;
-      height: 200%;
-      background: repeating-linear-gradient(
-        45deg,
-        rgba(138, 43, 226, 0.05),
-        rgba(75, 0, 130, 0.05) 10px,
-        transparent 10px,
-        transparent 20px
-      );
-      animation: move-bg 20s linear infinite;
-      z-index: -2;
-    }
-
-    @keyframes move-bg {
-      0% { transform: rotate(0deg) translate(0, 0); }
-      100% { transform: rotate(360deg) translate(10px, 10px); }
-    }
-
-    .rotating-orb {
-      position: absolute;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      top: 10%;
-      right: 10%;
-      background: radial-gradient(circle, #00ffff, transparent);
-      box-shadow: 0 0 80px 20px #00ffff;
-      animation: spin 12s linear infinite;
-      z-index: -1;
-      opacity: 0.6;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    .title {
-      color: #00ffff;
-      font-size: 28px;
-      text-shadow: 0 0 15px #00ffff;
-      margin-bottom: 20px;
-    }
-
-    .desc {
-      font-size: 16px;
-      color: #ccc;
-      margin-bottom: 20px;
-    }
-
-    table {
-      width: 90%;
-      max-width: 500px;
-      margin: 0 auto;
-      border-collapse: collapse;
-      background: rgba(255,255,255,0.05);
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 20px rgba(0,255,255,0.1);
-    }
-
-    th, td {
-      padding: 12px 15px;
-      text-align: left;
-    }
-
-    th {
-      background: rgba(0,255,255,0.2);
-      color: #00ffff;
-      text-transform: uppercase;
-      font-size: 14px;
-    }
-
-    tr:nth-child(even) {
-      background: rgba(255,255,255,0.05);
-    }
-
-    td {
-      color: #fff;
-      font-size: 15px;
-    }
-
-    .more-info {
-      width: 85%;
-      margin: 30px auto;
-      text-align: left;
-      line-height: 1.8;
-      color: #ccc;
-      background: rgba(255,255,255,0.05);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,255,255,0.1);
-    }
-
-    .more-info h2 {
-      color: #00ffff;
-      text-shadow: 0 0 8px #00ffff;
-      margin-bottom: 10px;
-      font-size: 18px;
-    }
-
-    footer {
-      text-align: center;
-      color: #888;
-      font-size: 13px;
-      padding: 20px 0;
-      background: rgba(0,0,0,0.7);
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
 </head>
 <body>
   <nav class="navbar">
     <h1>ZILLA</h1>
     <ul class="nav-links">
-      <li><a href="index.html" target="_blank">Dashboard</a></li>
-      <li><a href="tokenomics.html" target="_blank">Tokenomics</a></li>
-      <li><a href="whitepaper.html" target="_blank">Whitepaper</a></li>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="tokenomics.html">Tokenomics</a></li>
+      <li><a href="whitepaper.html">Whitepaper</a></li>
     </ul>
   </nav>
 
   <section class="hero">
     <div class="bg"></div>
     <div class="rotating-orb"></div>
+
+    <img src="zila.png" class="zila-img" alt="ZILA Token Logo" />
 
     <h2 class="title">💎 Tokenomics</h2>
     <p class="desc">Total Supply: <b>1,000,000,000 $ZILA</b></p>
@@ -206,7 +43,7 @@
       <p><b>Team:</b> 0% TGE, 15 months linear vesting</p>
       <p><b>Airdrop:</b> No vesting</p>
       <p><b>Private Round:</b> 10% TGE, 8 months linear vesting</p>
-      <p><b> Calculate Initial Circulating Supply : 115.000.000</b></p>
+      <p><b>Calculate Initial Circulating Supply:</b> 115,000,000</p>
     </div>
   </section>
 
@@ -214,4 +51,4 @@
     © 2025 Zilla Foundation. All Rights Reserved.
   </footer>
 </body>
-</html>
+</html

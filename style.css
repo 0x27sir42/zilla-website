@@ -1,75 +1,38 @@
-/* ============================================
-   FONT
-============================================ */
+/* Import font */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
 
-/* ============================================
-   GLOBAL BACKGROUND - GALAXY
-============================================ */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Orbitron', sans-serif;
-
-  /* Galaxy Background (FINAL) */
-  background: url('https://oaidalleapiprodscus.blob.core.windows.net/private/org-i05gbZqBMN8JE5MaCPCjYspQ/user-LKZ4UJRHTcIYbrBt0m1KMmJl/img-lNrqXjvM3xv9Gtx5b0hRfRrH.png?st=2025-01-24T02%3A33%3A40Z&se=2025-01-24T04%3A33%3A40Z&sp=r&sv=2023-11-03&sr=b&sig=RZpqYndv9RUr1iBWgZLkEwNgOHKk1N6rVLJUlcHRzm8%3D')
-    no-repeat center center fixed !important;
-  background-size: cover !important;
-
+  background: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&w=1400&auto=format&fit=crop') no-repeat center center fixed;
+  background-size: cover;
   color: #fff;
   overflow-x: hidden;
 }
 
-/* Dark overlay agar teks lebih jelas */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: -1;
-}
-
-/* ============================================
-   IMAGE STYLE
-============================================ */
-a-img, img {
-  width: 260px;
-  margin-top: 20px;
-  border-radius: 20px;
-  background: transparent !important;
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.35);
-}
-
-/* ============================================
-   NAVBAR
-============================================ */
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(6px);
-
+  background: rgba(0,0,0,0.6);
   padding: 15px 20px;
   position: sticky;
   top: 0;
   z-index: 10;
-  box-shadow: 0 0 18px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
 }
 
 .navbar h1 {
-  font-size: 20px;
+  font-size: 22px;
   color: #00ffff;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 10px;
+  gap: 12px;
 }
 
 .nav-links a {
@@ -83,17 +46,22 @@ a-img, img {
   color: #00ffff;
 }
 
-/* ============================================
-   HERO SECTION
-============================================ */
+/* HERO SECTION */
 .hero {
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
   position: relative;
   overflow: hidden;
 }
 
-/* Background efek garis rotasi */
+.hero img {
+  width: 260px;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.35);
+}
+
+/* Animated lines background */
 .bg {
   position: absolute;
   width: 250%;
@@ -114,18 +82,16 @@ a-img, img {
   100% { transform: rotate(360deg) translate(10px, 10px); }
 }
 
-/* Orb cahaya */
+/* Glow Orb */
 .rotating-orb {
   position: absolute;
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
-  top: 15%;
-  right: 15%;
-
+  top: 18%;
+  right: 18%;
   background: radial-gradient(circle, #00ffff, transparent);
-  box-shadow: 0 0 50px 10px #00ffff;
-
+  box-shadow: 0 0 50px 15px #00ffff;
   animation: spin 15s linear infinite;
   opacity: 0.6;
   z-index: 0;
@@ -136,23 +102,25 @@ a-img, img {
   100% { transform: rotate(360deg); }
 }
 
-/* ============================================
-   CONTENT BOX / SECTION STYLE
-============================================ */
-section, .hero, .content-box {
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(6px);
-  border-radius: 15px;
+/* TOKENOMICS & WHITEPAPER BOXES */
+.section-box {
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(0,255,255,0.2);
   padding: 25px;
-  margin: 20px;
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  margin: 40px 20px;
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(0,255,255,0.25);
 }
 
-/* ============================================
-   TITLES
-============================================ */
-.title {
-  font-size: 28px;
-  font-weight: 700;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+.section-box h2 {
+  color: #00ffff;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 22px;
 }
+
+/* Ensure all images transparent */
+img {
+  background: transparent !important;
+   }
